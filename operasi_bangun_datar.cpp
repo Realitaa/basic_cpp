@@ -2,15 +2,13 @@
 // Membuat menu untuk operasi bangun datar dan bangun ruang
 
 #include <iostream>
-#include <math.h>
 using namespace std;
 
-int menu()
+int main()
 {
     int menu;
     cout << "Aplikasi Menghitung Bangun Datar" << endl;
     cout << "================================" << endl;
-    cout << "Bangun Datar" << endl;
     cout << "1. Persegi" << endl;
     cout << "2. Persegi Panjang" << endl;
     cout << "3. Segitiga" << endl;
@@ -23,13 +21,7 @@ int menu()
     cout << "Pilih operasi: ";
     cin >> menu;
 
-    return menu;
-}
-
-void operation(int main)
-{
-    // int main = menu();
-    switch (main)
+    switch (menu)
     {
     case 1:
         cout << "Masukkan sisi persegi: ";
@@ -117,16 +109,6 @@ void operation(int main)
     default:
         break;
     }
-}
 
-int main()
-{
-    int choice = menu();
-    while (choice != 9)
-    {
-        operation(choice);
-        choice = menu();
-    }
-    cout << "Terima kasih telah menggunakan aplikasi ini" << endl;
     return 0;
 }
